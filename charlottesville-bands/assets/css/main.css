@@ -2198,6 +2198,7 @@
 		top: 0;
 		width: 100%;
 		z-index: 10000;
+		height: 50px;
 	}
 
 		#header h1 {
@@ -2228,7 +2229,7 @@
 
 				#header nav ul li a {
 					border: solid 1px transparent;
-					color: inherit;
+					color: #FFFFFF;
 					display: inline-block;
 					line-height: 1em;
 					padding: 0.6em 0.75em;
