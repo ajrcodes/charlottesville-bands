@@ -1550,6 +1550,10 @@
 
 /* Basic */
 
+	.gray {
+		background-color: rgba(163, 169, 170, 0.6);
+	}
+
 	body {
 		background: #f3f6fa;
 	}
