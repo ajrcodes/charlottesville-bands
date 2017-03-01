@@ -1,5 +1,4 @@
 <?php
-	
 	// setup connection
 	include_once 'db.php';
 
@@ -11,16 +10,9 @@
     $state = $_POST['state'];
     $zipcode = $_POST['zipcode'];
 
-    // format check the inputs & record any errors 
-    $errors = array();
-
-
-
-    if (!$errors) {
-		// insert into MySQL db
-		$insert_q = "INSERT INTO siteusers VALUES('$name', '$email', '$address', '$city', '$state', '$zipcode')";
-		mysqli_query($conn, $insert_q);
-		echo json_encode( array('result' => true ) );
-	}
-
+    // insert and query db
+	$insert_q = "INSERT INTO siteusers VALUES('$name', '$email', '$address', '$city', '$state', '$zipcode')";
+	$result = mysqli_query($conn, $insert_q);
+    // will set result to the status of the insertion -- false if the email was already present
+    echo json_encode( array('result' => $result) );
 ?>

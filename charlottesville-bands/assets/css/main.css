@@ -16,6 +16,11 @@
 */
 
 /* Reset */
+	
+	/* Alterations */
+	footer#footer {
+		height: 100px !important;
+	}
 
 	/* Signup form */
 
@@ -26,6 +31,10 @@
 	input#signup {
 		display: block;
 		margin: 0 auto;
+	}
+
+	input.required.error {
+		border-color: red !important;
 	}
 
 	/* ------------------------- */
@@ -2534,7 +2543,7 @@
 	#footer {
 		background: #E8EEF4;
 		color: #7c8081;
-		padding: 5em 5em 10em 5em;
+		padding: 2.5em 2.5em 5em 2.5em;
 		text-align: center;
 	}
 
