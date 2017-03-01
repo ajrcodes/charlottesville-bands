@@ -7,7 +7,28 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* 
+	CS4753 - E-commerce
+	Semester Project
+	Group members:  Andrew Roberts (ajr5re), Ryan Donovan (rad9vy)
+
+	Current Version:  Milestone 2
+*/
+
 /* Reset */
+
+	/* Signup form */
+
+	div.form-group {
+		margin-bottom: 30px;
+	}
+
+	input#signup {
+		display: block;
+		margin: 0 auto;
+	}
+
+	/* ------------------------- */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -32,7 +53,7 @@
 
 	blockquote, q {
 		quotes: none;
-	}
+	} 
 
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<!--
+	CS4753 - E-commerce
+	Semester Project
+	Group members:  Andrew Roberts (ajr5re), Ryan Donovan (rad9vy)
+
+	Current Version:  Milestone 2
+-->
+<html>
+	<head>
+		<title>Charlottesville Bands</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="index">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1 id="logo"><a href="index.html"><span></span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a class="gray" href="index.html">Home</a></li>
+							<li><a class="gray" href="about.html">About Us</a></li>
+							<li><a class="gray"href="">The Bands</a></li>
+							<li><a href="" class="button special">Login</a></li>
+							<li class="current"><a href="signup.html" class="button special">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="icon fa-chevron-circle-up"></span>
+						<h2>SIGN UP</h2>
+					</header>
+
+					<!-- Three -->
+						<section class="wrapper style3 container">
+
+							<!-- Registration form -->
+
+							<div id="content">
+
+								<div class="signup-wrapper">
+
+						          <form class="form-horizontal" id="regForm" action="signup.php" method="post">
+						  
+						            <!-- Name input-->
+						            <div class="form-group">
+						            	<label for="name">Name</label>
+						            	<input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+						            </div>
+						    
+						    		<div class="padding-top"></div>
+
+						            <!-- Email input-->
+						            <div class="form-group">
+						              <label class="col-md-3 control-label" for="email">Email</label>
+						              <div class="col-md-9">
+						                <input id="email" name="email" type="text" placeholder="youremail@gmail.com" class="form-control">
+						              </div>
+						            </div>
+						    
+						    		<!-- Address input-->
+						            <div class="form-group">
+						              <label class="col-md-3 control-label" for="email">Address</label>
+						              <div class="col-md-9">
+						                <input id="address" name="address" type="text" placeholder="123 Main St." class="form-control">
+						              </div>
+						            </div>
+
+						            <!-- City input-->
+						            <div class="form-group">
+						              <label class="col-md-3 control-label" for="email">City</label>
+						              <div class="col-md-9">
+						                <input id="city" name="city" type="text" placeholder="Charlottesville" class="form-control">
+						              </div>
+						            </div>
+
+						            <!-- State input-->
+						            <div class="form-group">
+						              <label class="col-md-3 control-label" for="email">State</label>
+						              <div class="col-md-9">
+						                <input id="state" name="state" type="text" placeholder="Virginia" class="form-control">
+						              </div>
+						            </div>
+
+						            <!-- Zipcode input-->
+						            <div class="form-group">
+						              <label class="col-md-3 control-label" for="email">Zipcode</label>
+						              <div class="col-md-9">
+						                <input id="zipcode" name="zipcode" type="text" placeholder="22903" class="form-control">
+						              </div>
+						            </div>
+						    
+						            <!-- Form actions -->
+						            <div class="form-group">
+						              <div class="col-md-12 text-right">
+						                <input type="submit" id="signup" class="btn btn-primary btn-md">
+						              </div>
+						            </div>
+
+						          </form>
+
+						    	</div>
+
+						    </div>
+						</section>
+
+				</article>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Charlottesville Bands</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+		<!-- Form Submit -->
+		<script type='text/javascript'>
+			$(function() {
+			    /* attach a submit handler to the form */
+			    $("#regForm").submit(function(event) {
+
+			      /* stop form from submitting normally */
+			      event.preventDefault();
+
+			      /* get the action attribute from the <form action=""> element */
+			      var $form = $( this ),
+			          url = $form.attr( 'action' );
+
+			      /* Send the data */
+			      var posting = $.post( url, 
+			      	{ name: $('#name').val(), 
+			      	  email: $('#email').val(),
+			      	  address: $('#address').val(),
+			      	  city: $('#city').val(),
+			      	  state: $('#state').val(),
+			      	  zipcode: $('#zipcode').val() } );
+
+			      /* Alerts the results */
+			      posting.done(function( data ) {
+			        alert('success');
+			      });
+
+			      /* reset form data */
+			        $('#name').val('');
+  					$('#email').val('');
+  					$('#address').val('');
+  					$('#city').val('');
+  					$('#state').val('');
+  					$('#zipcode').val('');
+  					$('#signup').blur();
+			    });
+			 });
+		</script>
+	</body>
+</html>
