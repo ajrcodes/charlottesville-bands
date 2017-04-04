@@ -12,6 +12,11 @@
 
 	Current Version:  Milestone 2
 -->
+
+<?php
+	include('sessioncheck.php');
+?>
+
 <html>
 	<head>
 		<title>Charlottesville Bands</title>
@@ -66,7 +71,7 @@
 
 							<footer class="major">
 								<ul class="buttons">
-									<li><a href="signup.html" class="button">Sign up</a></li>
+									<li><a href="signuppage.php" class="button">Sign up</a></li>
 								</ul>
 							</footer>
 

@@ -12,6 +12,10 @@
 	Current Version:  Milestone 1
 -->
 
+<?php
+	include('sessioncheck.php');
+?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -90,7 +94,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="images/crd_img.jpg" width = "250" height = "300" alt="" /></a>
+										<a href="signuppage.php" class="image featured"><img src="images/crd_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>
 											<h3>Corduroy</h3>
 										</header>
@@ -101,7 +105,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="images/kendall_street_img.jpg" width = "250" height = "300" alt="" /></a>
+										<a href="signuppage.php" class="image featured"><img src="images/kendall_street_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>
 											<h3>Kendall Street Company</h3>
 										</header>
@@ -114,7 +118,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="images/ajr_img.jpg" width = "250" height = "300" alt="" /></a>
+										<a href="signuppage.php" class="image featured"><img src="images/ajr_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>
 											<h3>The Andrew Roberts Experience</h3>
 										</header>
@@ -125,7 +129,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="images/dmb_img.jpeg" width = "250" height = "300" alt="" /></a>
+										<a href="signuppage.php" class="image featured"><img src="images/dmb_img.jpeg" width = "250" height = "300" alt="" /></a>
 										<header>
 											<h3>Dave Matthews Band</h3>
 										</header>
@@ -137,7 +141,7 @@
 
 							<footer class="major">
 								<ul class="buttons">
-									<li><a href="login.html" class="button">See More Bands</a></li>
+									<li><a href="signuppage.php" class="button">See More Bands</a></li>
 								</ul>
 							</footer>
 
@@ -154,8 +158,8 @@
 					</header>
 					<footer>
 						<ul class="buttons">
-							<li><a href="signup.html" class="button special">Sign up</a></li>
-							<li><a href="" class="button">Login</a></li>
+							<li><a href="signuppage.php" class="button special">Sign up</a></li>
+							<li><a href="loginpage.php" class="button">Login</a></li>
 						</ul>
 					</footer>
 

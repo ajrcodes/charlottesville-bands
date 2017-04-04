@@ -12,6 +12,11 @@
 
 	Current Version:  Milestone 2
 -->
+
+<?php
+	include('sessioncheck.php');
+?>
+
 <html>
 	<head>
 		<title>Charlottesville Bands</title>

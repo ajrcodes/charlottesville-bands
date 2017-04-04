@@ -34,8 +34,8 @@
 					<h1 id="logo"><a href="memberpage.php"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="gray"><a href="memberpage.php"><span class="icon fa fa-user"></span> <?php echo $name; ?></a></li>
-							<li class="gray"><a href="#" class="button special">LOGOUT</a></li>
+							<li class="gray"><a href=""><span class="icon fa fa-user"></span> <?php echo $name; ?></a></li>
+							<li class="gray"><a href="logout.php" class="button special">LOGOUT</a></li>
 						</ul>
 					</nav>
 				</header>
