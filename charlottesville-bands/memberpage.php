@@ -81,7 +81,7 @@
 									<section>
 										<a href="jazz.php" class="image featured"><img src="images/jazz_img.png" width = "250" height = "300" alt="" /></a>
 										<header>
-											<a href="#"><h3>Jazz</h3></a>
+											<a href="jazz.php"><h3>Jazz</h3></a>
 										</header>
 									</section>
 
@@ -91,7 +91,7 @@
 									<section>
 										<a href="rock.php" class="image featured"><img src="images/rock_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>
-											<a href="#"><h3>ROCK</h3></a>
+											<a href="rock.php"><h3>ROCK</h3></a>
 										</header>
 									</section>
 
@@ -103,7 +103,7 @@
 									<section>
 										<a href="soul.php" class="image featured"><img src="images/soul_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>
-											<a href="#"><h3>SOUL</h3></a>
+											<a href="soul.php"><h3>SOUL</h3></a>
 										</header>
 									</section>
 
@@ -113,7 +113,7 @@
 									<section>
 										<a href="jamband.php" class="image featured"><img src="images/jambands_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>
-											<a href="#"><h3>JAM BANDS</h3></a>
+											<a href="jamband.php"><h3>JAM BANDS</h3></a>
 										</header>
 									</section>
 

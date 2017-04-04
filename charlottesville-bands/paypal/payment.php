@@ -26,23 +26,27 @@ $transaction = new Transaction();
 $payment = new Payment();
 $redirectUrls = new RedirectUrls();
 
+// Dynamically set some of the details
+$price=$_GET['price'];
+$description = $_GET['description'];
+
 // Payer
 $payer->setPaymentMethod('paypal');
 
 // Details
 $details->setShipping('0.00')
 	->setTax('0.00')
-	->setSubtotal('100.00');
+	->setSubtotal($price);
 
 // Amount
 $amount->setCurrency('USD')
-	->setTotal('100.00')
+	->setTotal($price)
 	->setDetails($details);
 
 // Item details                          
 $item->setQuantity(1)
-	->setName('Band booking')          
-	->setPrice('100.00')               
+	->setName($description)          
+	->setPrice($price)               
 	->setCurrency('USD');  
 
 // Item List
@@ -50,7 +54,7 @@ $itemList->setItems(array($item));
 
 // Transaction
 $transaction->setAmount($amount)
-	->setDescription('Band booking')
+	->setDescription($description)
 	->setItemList($itemList); 
 
 // Payment

@@ -21,8 +21,9 @@
 	</head>
 	<body class="index">
 		<div id="page-wrapper">
+			
+				<!-- Header -->
 
-			<!-- Header -->
 				<header id="header" class="alt">
 					<h1 id="logo"><a href="memberpage.php"><span></span></a></h1>
 					<nav id="nav">
@@ -33,70 +34,55 @@
 					</nav>
 				</header>
 
-			<!-- Banner -->
-				<section id="banner">
+				<!-- Main -->
 
-					<!--
-						".inner" is set up as an inline-block so it automatically expands
-						in both directions to fit whatever's inside it. This means it won't
-						automatically wrap lines, so be sure to use line breaks where
-						appropriate (<br />).
-					-->
-					<div class="inner">
+				<article id="main">
 
-						<header>
-							<h2> Welcome, <?php echo $name; ?></h2>
-						</header>
-						<h2> Charlottesville bands</h2>
-						<footer>
-							<ul class="buttons vertical">
-								<li><a href="#main" class="button fit scrolly">BOOK NOW</a></li>
-							</ul>
-						</footer>
+					<header class="special container">
+						<span class="icon fa fa-calendar"></span>
+						<h2>BOOK NOW</h2>
+					</header>
 
-					</div>
+					<!-- Three -->
 
-				</section>
+						<section class="wrapper style3 container special">
 
-		<section class="wrapper style3 container special">
+								<header class="major">
+									<h2>Charlottesville's <strong>Jam Bands</strong></h2>
+								</header>
 
-							<header class="major">
-								<h2>Charlottesville's <strong>Jam Bands</strong></h2>
-							</header>
+								<div class="row">
+									<div class="6u 12u(narrower)">
 
-							<div class="row">
-								<div class="6u 12u(narrower)">
+										<section>
+											<a href="paypal/payment.php?price=400&description=Dave Matthews Band" class="image featured"><img src="images/dmb1.jpg" width = "250" height = "300" alt="" /></a>
+											<header>
+												<h3>Dave Matthews Band</h3>
+											</header>
+											<p>The pride of Charlottesville</p>
+											<p>Price: $400</p>
+											<a href="paypal/payment.php?price=400&description=Dave Matthews Band" class="button special">Book</a>
+										</section>
 
-									<section>
-										<a href="#" class="image featured"><img src="images/dmb1.jpg" width = "250" height = "300" alt="" /></a>
-										<header>
-											<h3>Dave Matthews Band</h3>
-										</header>
-										<p>The pride of Charlottesville</p>
-										<p>Price: $100</p>
-										<a href="paypal/payment.php" class="button special">Book</a>
-									</section>
+									</div>
+									<div class="6u 12u(narrower)">
 
-								</div>
-								<div class="6u 12u(narrower)">
+										<section>
+											<a href="paypal/payment.php?price=3000&description=Kendall Street Company" class="image featured"><img src="images/kendall_street_img.jpg" width = "250" height = "300" alt="" /></a>
+											<header>
+												<h3>Kendall Street Company</h3>
+											</header>
+											<p>UVA's favorite Jam Band</p>
+											<p>Price: $3000</p>
+											<a href="paypal/payment.php?price=3000&description=Kendall Street Company" class="button special">Book</a>
+										</section>
 
-									<section>
-										<a href="#" class="image featured"><img src="images/kendall_street_img.jpg" width = "250" height = "300" alt="" /></a>
-										<header>
-											<h3>Kendall Street Company</h3>
-										</header>
-										<p>UVA's favorite Jam Band</p>
-										<p>Price: $100</p>
-										<a href="paypal/payment.php" class="button special">Book</a>
-									</section>
+									</div>
 
 								</div>
-
-							</div>
-
 						</section>
-
 				</article>
+
 			<!-- Footer -->
 				<footer id="footer">
 
