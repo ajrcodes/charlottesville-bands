@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <!--
 	Twenty by HTML5 UP
 	html5up.net | @ajlkn
@@ -12,6 +11,13 @@
 
 	Current Version:  Milestone 1
 -->
+
+<?php
+	require ('header.php');
+?>
+
+<!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>Charlottesville Bands</title>
