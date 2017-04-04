@@ -55,11 +55,11 @@
 
 								<div class="signup-wrapper">
 
-						          <form class="form-horizontal" id="form" action="login.php" method="post">
+						          <form class="form-horizontal" id="myForm" action="login.php" method="post">
 						  
 						            <!-- Name input-->
 						            <div class="form-group">
-						            	<label class="col-md-3 control-label" for="name">Username</label>
+						            	<label class="col-md-3 control-label" for="username">Username</label>
 						            	<input id="username" type="email" name="email" placeholder="youremail@gmail.com" class="form-control required">
 						            </div>
 
@@ -70,10 +70,16 @@
 						                <input id="password" type="password" name="password" placeholder="Password" class="form-control required">
 						              </div>
 						            </div>
+
+   									<!-- Submit Button -->
+   									<div style="text-align:center;">
+						           		<input type="submit" id="login" class="btn btn-primary btn-md">
+						        	</div>
 						          </form>
-						          <!-- Submit Button -->
+						      
+						      	  <!-- Signup link -->
 						          <div style="text-align:center;">
-						          	<a href="" class="button special">Login</a>
+						          	<div id="tester">BLAH</div>
 						          	<br>
 						          	<br>
 						          	Don't have an account yet? <a href="signup.html">Sign Up Now!</a>
@@ -123,20 +129,24 @@
 			    "Please check your input."
 			);
 
-			$('#regForm').validate({
+			$('#myForm').validate({
 
 			    submitHandler: function(form) {
+
 			        $.ajax({
 			            url: form.action,
 			            type: form.method,
 			            data: { username: $('#username').val(), 
-			      	  			password: $('#password').val(),},
+			      	  			password: $('#password').val()	},
 			      	  	dataType: 'json',
 			            success: function(response) {
 			                if(response.result) {
-			                	alert("Success!");
+			                	alert("OK1");
+			                	window.location = "memberpage.php"; // Redirecting To Member Page
 			                } else {
-			                	alert("This email is already registered.  Please login.");
+			                	alert("OK2");
+			          			// no match, display that there was a wrong user/pass combo
+			          			//document.getElementById("tester").innerText = 'yah';
 			                }
 			            }            
 			        });

@@ -1,3 +1,8 @@
+
+<?php
+	include('session.php');
+?>
+<!DOCTYPE HTML>
 <!--
 	Twenty by HTML5 UP
 	html5up.net | @ajlkn
@@ -11,13 +16,6 @@
 
 	Current Version:  Milestone 1
 -->
-
-<?php
-	require ('header.php');
-?>
-
-<!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Charlottesville Bands</title>
@@ -36,11 +34,8 @@
 					<h1 id="logo"><a href="index.html"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="gray current"><a href="index.html">Home</a></li>
-							<li class="gray"><a href="about.html">About Us</a></li>
-							<li class="gray"><a href="bands.html">The Bands</a></li>
-							<li class="gray"><a href="" class="button special">Login</a></li>
-							<li class="gray"><a href="signup.html" class="button special">Sign Up</a></li>
+							<li class="gray"><a href="memberpage.php"><span class="icon fa fa-user"></span> <?php echo $name; ?></a></li>
+							<li class="gray"><a href="#" class="button special">LOGOUT</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -57,7 +52,7 @@
 					<div class="inner">
 
 						<header>
-							<h2> Welcome, ENTER NAME HERE! </h2>
+							<h2> Welcome, <?php echo $name; ?></h2>
 						</header>
 						<h2> Charlottesville bands</h2>
 						<footer>

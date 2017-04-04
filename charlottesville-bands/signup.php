@@ -4,20 +4,22 @@
     require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
     $mail = new PHPMailer;
 
-	// setup db connection
-	include_once 'db.php';
+    // setup db connection
+    include_once 'db.php';
 
-	// get posted variables
+    // get posted variables
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $password = $_POST['password'];
+    $encryptedPass = md5($password);
     $address = $_POST['address'];
     $city = $_POST['city'];
     $state = $_POST['state'];
     $zipcode = $_POST['zipcode'];
 
     // insert and query db
-	$insert_q = "INSERT INTO siteusers VALUES('$name', '$email', '$address', '$city', '$state', '$zipcode')";
-	$result = mysqli_query($conn, $insert_q);
+    $insert_q = "INSERT INTO siteusers VALUES('$name', '$email', '$encryptedPass','$address', '$city', '$state', '$zipcode')";
+    $result = mysqli_query($conn, $insert_q);
 
     // Send the user a confirmation email
     $mail->isSMTP();                                      // Set mailer to use SMTP

@@ -1,49 +1,40 @@
 <?php
+    // starts the session
+    if (session_id() == "") {
+        session_start();
+    }
 
-    // mailer functionality
-    require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-    $mail = new PHPMailer;
+    // setup db connection
+    include_once 'db.php';
 
-	// setup db connection
-	include_once 'db.php';
+    // get posted variables
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $encryptedPass = md5($password);
+    
+    // USED: https://www.formget.com/login-form-in-php/
 
-	// get posted variables
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $zipcode = $_POST['zipcode'];
+    // SQL query to fetch information of registered users and finds user match.
+    $select_q = "SELECT * FROM siteusers WHERE email = '$username' AND password = '$encryptedPass'";
+    $query = mysqli_query($conn, $select_q);
+    $num_rows = mysqli_num_rows($query);
 
-    // insert and query db
-	$insert_q = "INSERT INTO siteusers VALUES('$name', '$email', '$address', '$city', '$state', '$zipcode')";
-	$result = mysqli_query($conn, $insert_q);
+    if ($num_rows == 1) {
+        // then there was a matching password, retrieve it
+        $row = mysqli_fetch_array($query);
+        $name = $row['name'];
 
-    // Send the user a confirmation email
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
-    $mail->Mailer   = 'gmail';
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'ajrjazz@gmail.com';                // SMTP username
-    $mail->Password = 'cokevanillaR0x';                   // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
-
-    $mail->setFrom('ajrjazz@gmail.com', 'Charlottesville Bands');
-    $mail->addAddress($email);                            // Name is optional
-    $mail->addReplyTo('ajrjazz@gmail.com', 'Information');
-
-    $mail->isHTML(true);                                  // Set email format to HTML
-
-    $mail->Subject = 'Thanks for registering!';
-    $mail->Body    = 'You registered for Charlottesville Bands! <b>Awesome</b>';
-    $mail->AltBody = 'You registered for Charlottesville Bands! Awesome.';
-
-    if(!$mail->send()) {
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        // login
+        $_SESSION['name'] = $name;
+        
+        $result = true;
     } 
 
-    // will set result to the status of the insertion -- false if the email was already present
+    else {
+        // no matching 
+        $result = false;
+    }
+    
+    // return either true / false based on whether there was a matching username / password
     echo json_encode( array('result' => $result) );
 ?>
