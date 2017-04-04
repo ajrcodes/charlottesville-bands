@@ -29,13 +29,13 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html"><span></span></a></h1>
+					<h1 id="logo"><a href="index.php"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="gray current"><a href="index.html">Home</a></li>
-							<li class="gray"><a href="about.html">About Us</a></li>
-							<li class="gray"><a href="login.html" class="button special">Login</a></li>
-							<li class="gray"><a href="signup.html" class="button special">Sign Up</a></li>
+							<li class="gray current"><a href="index.php">Home</a></li>
+							<li class="gray"><a href="aboutpage.php">About Us</a></li>
+							<li class="gray"><a href="loginpage.php" class="button special">Login</a></li>
+							<li class="gray"><a href="signuppage.php" class="button special">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>

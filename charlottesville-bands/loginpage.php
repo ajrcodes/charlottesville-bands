@@ -27,14 +27,13 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html"><span></span></a></h1>
+					<h1 id="logo"><a href="index.php"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a class="gray" href="index.html">Home</a></li>
-							<li><a class="gray" href="about.html">About Us</a></li>
-							<li><a class="gray"href="bands.html">The Bands</a></li>
-							<li class = "current"><a href="login.html" class="button special">Login</a></li>
-							<li><a href="signup.html" class="button special">Sign Up</a></li>
+							<li><a class="gray" href="index.php">Home</a></li>
+							<li><a class="gray" href="aboutpage.php">About Us</a></li>
+							<li class = "current"><a href="" class="button special">Login</a></li>
+							<li><a class="button special" href="signuppage.php">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -79,7 +78,9 @@
 						      
 						      	  <!-- Signup link -->
 						          <div style="text-align:center;">
-						          	<div id="tester">BLAH</div>
+						          	<br>
+						          	<br>
+						          	<div hidden id="errorMessage"></div>
 						          	<br>
 						          	<br>
 						          	Don't have an account yet? <a href="signup.html">Sign Up Now!</a>
@@ -141,12 +142,11 @@
 			      	  	dataType: 'json',
 			            success: function(response) {
 			                if(response.result) {
-			                	alert("OK1");
 			                	window.location = "memberpage.php"; // Redirecting To Member Page
 			                } else {
-			                	alert("OK2");
 			          			// no match, display that there was a wrong user/pass combo
-			          			//document.getElementById("tester").innerText = 'yah';
+			          			$('#errorMessage').show();
+			          			$('#errorMessage').html("<font color='red'>The username or password was incorrect.  Try again.</font>");
 			                }
 			            }            
 			        });

@@ -31,7 +31,7 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html"><span></span></a></h1>
+					<h1 id="logo"><a href="memberpage.php"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
 							<li class="gray"><a href="memberpage.php"><span class="icon fa fa-user"></span> <?php echo $name; ?></a></li>
