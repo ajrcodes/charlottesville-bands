@@ -80,6 +80,12 @@
 						
 							</div>
 
+							<!-- Back to genres button-->
+							<br>
+							<br>
+							<br>
+							<a href="memberpage.php" class="button">BACK TO GENRES</a>
+							
 						</section>
 				</article>
 

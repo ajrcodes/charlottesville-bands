@@ -36,7 +36,7 @@
 					<h1 id="logo"><a href="index.php"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="gray current"><a href="index.php">Home</a></li>
+							<li class="gray current"><a href="">Home</a></li>
 							<li class="gray"><a href="aboutpage.php">About Us</a></li>
 							<li class="gray"><a href="loginpage.php" class="button special">Login</a></li>
 							<li class="gray"><a href="signuppage.php" class="button special">Sign Up</a></li>
@@ -92,7 +92,6 @@
 
 							<div class="row">
 								<div class="6u 12u(narrower)">
-
 									<section>
 										<a href="signuppage.php" class="image featured"><img src="images/crd_img.jpg" width = "250" height = "300" alt="" /></a>
 										<header>

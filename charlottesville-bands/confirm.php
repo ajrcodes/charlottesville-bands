@@ -3,11 +3,17 @@
 ?>
 <!DOCTYPE HTML>
 <!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<!--
 	CS4753 - E-commerce
 	Semester Project
 	Group members:  Andrew Roberts (ajr5re), Ryan Donovan (rad9vy)
 
-	Current Version:  Milestone 4
+	Current Version:  Milestone 1
 -->
 <html>
 	<head>
@@ -21,73 +27,46 @@
 	</head>
 	<body class="index">
 		<div id="page-wrapper">
-			
-				<!-- Header -->
 
+			<!-- Header -->
 				<header id="header" class="alt">
 					<h1 id="logo"><a href="memberpage.php"><span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="gray"><a href="memberpage.php"><span class="icon fa fa-user"></span> <?php echo $name; ?></a></li>
+							<li class="gray"><a href=""><span class="icon fa fa-user"></span> <?php echo $name; ?></a></li>
 							<li class="gray"><a href="logout.php" class="button special">LOGOUT</a></li>
 						</ul>
 					</nav>
 				</header>
-
-				<!-- Main -->
-
+			<!-- Main -->
 				<article id="main">
 
 					<header class="special container">
-						<span class="icon fa fa-calendar"></span>
-						<h2>BOOK NOW</h2>
+						<span class="icon fa-book"></span>
+						<h2>Confirmation</h2>
 					</header>
 
 					<!-- Three -->
-
 						<section class="wrapper style3 container special">
 
-								<header class="major">
-									<h2>Charlottesville's <strong>Jam Bands</strong></h2>
-								</header>
+							<header class="major">
+								<p> <i class="fa fa-check-circle-o fa-2x" aria-hidden="true" style = "color : green"></i> <font size = "+2">Congratulations! Your booking is confirmed.</font></p>
+							</header>
 
-								<div class="row">
-									<div class="6u 12u(narrower)">
+							<div class="row">
 
-										<section>
-											<a href="paypal/payment.php?price=400&description=Dave Matthews Band" class="image featured"><img src="images/dmb1.jpg" width = "250" height = "300" alt="" /></a>
-											<header>
-												<h3>Dave Matthews Band</h3>
-											</header>
-											<p>The pride of Charlottesville</p>
-											<p>Price: $400</p>
-											<a href="paypal/payment.php?price=400&description=Dave Matthews Band" class="button special">Book</a>
-										</section>
+							</div>
 
-									</div>
-									<div class="6u 12u(narrower)">
+							<footer class="major">
+								<ul class="buttons">
+									<li><a href="memberpage.php" class="button">Back to Member Page</a></li>
+								</ul>
+							</footer>
 
-										<section>
-											<a href="paypal/payment.php?price=3000&description=Kendall Street Company" class="image featured"><img src="images/kendall_street_img.jpg" width = "250" height = "300" alt="" /></a>
-											<header>
-												<h3>Kendall Street Company</h3>
-											</header>
-											<p>UVA's favorite Jam Band</p>
-											<p>Price: $3000</p>
-											<a href="paypal/payment.php?price=3000&description=Kendall Street Company" class="button special">Book</a>
-										</section>
-
-									</div>
-
-								</div>
-
-							<!-- Back to genres button-->
-							<br>
-							<br>
-							<br>
-							<a href="memberpage.php" class="button">BACK TO GENRES</a>
 						</section>
+
 				</article>
+
 
 			<!-- Footer -->
 				<footer id="footer">

@@ -88,7 +88,7 @@
 						          	<div hidden id="errorMessage"></div>
 						          	<br>
 						          	<br>
-						          	Don't have an account yet? <a href="signup.html">Sign Up Now!</a>
+						          	Don't have an account yet? <a href="signuppage.php">Sign Up Now!</a>
 						          </div>
 
 						    	</div>

@@ -37,10 +37,10 @@ if(isset($_GET['approved'])) {
 
 	    // INSERT HERE --> PAYMENT VERIFICATION AND UPDATE DB TO SHOW THE COMPLETION
 
-	    header('Location: http://localhost/charlottesville-bands/bands.html');
+	    header('Location: http://localhost/charlottesville-bands/confirm.php');
 
 	} else {
-		header('Location: /../bands.html');
+		header('Location: http://localhost/charlottesville-bands/memberpage.php');
 	}
 
 }
